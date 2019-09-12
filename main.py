@@ -16,6 +16,9 @@ def printBoard():
                 print(array[i][j]+' ')
             else:  
                 print(array[i][j]+' ', end='')  
+                
+array[3][3] = array[4][4] = ' o'
+array[3][4] = array[4][3] = ' x'
 
 printBoard()
 while True:
