@@ -1,7 +1,7 @@
 print("reversi")
 array = []
 row = []
-turn =' o'
+turn ='◎'
 
 for i in range(0,8):
     row = []
@@ -13,16 +13,16 @@ def printBoard():
     for i in range(0,8):
         for j in range(0,8):
             if(j == 7):
-                print(array[i][j]+' ')
+                print(array[i][j].rjust(5))
             else:  
-                print(array[i][j]+' ', end='')  
+                print(array[i][j].rjust(5), end='')  
                 
-array[3][3] = array[4][4] = ' o'
-array[3][4] = array[4][3] = ' x'
+array[3][3] = array[4][4] = '◎'
+array[3][4] = array[4][3] = '◉'
 
 printBoard()
 while True:
-    pos = input("Enter position: ")
+    pos = input("Turn ( " + turn +" ) >> ")
     if len(pos)==2:
         row = int(pos[0])
         col = int(pos[1])
