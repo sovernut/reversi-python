@@ -12,10 +12,11 @@ for i in range(0,8):
 def printBoard(): 
     for i in range(0,8):
         for j in range(0,8):
-            if(j == 7):
-                print(array[i][j].rjust(5))
-            else:  
+            if array[i][j] != str(i)+str(j):
+                print((array[i][j]+' ').rjust(5), end='')  
+            else:
                 print(array[i][j].rjust(5), end='')  
+        print()
                 
 array[3][3] = array[4][4] = '◎'
 array[3][4] = array[4][3] = '◉'
